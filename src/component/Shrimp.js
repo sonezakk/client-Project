@@ -4,6 +4,16 @@ export default function Shrimp() {
   const [product, setProduct] = useState("");
   const [size, setSize] = useState("");
   const [allproduct, setAllproduct] = useState([]);
+  const renderallproduct =() =>{
+        if(allproduct && allproduct.length)
+            return allproduct.map((allproduct,index) =>{
+                return(
+                    <li key={index}>
+                        {product},{size}
+                    </li>
+                )
+            })
+  } 
   return (
     <div>
       <spen>
@@ -14,18 +24,29 @@ export default function Shrimp() {
          onChange={(e)=>setProduct(e.target.value)}
 
          />
+         <p>ไซต์</p>
+         <input type="text"
+         placeholder="กุ้งขาว/กุ้งดำ"
+         onChange={(e)=>setSize(e.target.value)}
+
+         />
+         
         <button
         
           
           onClick={e => {
             e.preventDefault();
-            setAllproduct;
+            setAllproduct([...allproduct,{...product,...size}])
           }}
-        ></button>
+        >ADD</button>
       </spen>
+     {/* {renderallproduct()} */}
       <div className="listproduct">
-        <ul>xxxx</ul>
-        <ul>xxxx</ul>
+       <ul>
+        {renderallproduct()}
+           {/* {allproduct.map(item => <li key={item}>Product :{product}</li> )}
+           */}
+       </ul>
       </div>
     </div>
   );
