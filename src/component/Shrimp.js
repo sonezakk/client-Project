@@ -4,49 +4,52 @@ export default function Shrimp() {
   const [product, setProduct] = useState("");
   const [size, setSize] = useState("");
   const [allproduct, setAllproduct] = useState([]);
-  const renderallproduct =() =>{
-        if(allproduct && allproduct.length)
-            return allproduct.map((allproduct,index) =>{
-                return(
-                    <li key={index}>
-                        {product},{size}
-                    </li>
-                )
-            })
-  } 
+  const renderallproduct = () => {
+    if (allproduct && allproduct.length)
+      return allproduct.map((allproduct, index) => {
+        return (
+          <li key={index}>
+            {product},{size}
+          </li>
+        );
+      });
+  };
   return (
     <div>
       <spen>
         <p>ประเภท</p>
-        console.log(e);
-        <input type="text"
-         placeholder="กุ้งขาว/กุ้งดำ"
-         onChange={(e)=>setProduct(e.target.value)}
 
-         />
-         <p>ไซต์</p>
-         <input type="text"
-         placeholder="กุ้งขาว/กุ้งดำ"
-         onChange={(e)=>setSize(e.target.value)}
+        <input
+          type="text"
+          placeholder="กุ้งขาว/กุ้งดำ"
+          onChange={(e) => setProduct(e.target.value)}
+        />
+        <p>ไซต์</p>
+        <input
+          type="text"
+          placeholder="กุ้งขาว/กุ้งดำ"
+          onChange={(e) => setSize(e.target.value)}
+        />
 
-         />
-         
         <button
-        
-          
-          onClick={e => {
-            e.preventDefault();
-            setAllproduct([...allproduct,{...product,...size}])
+          onClick={(e) => {
+            // e.preventDefault();
+            setAllproduct([...allproduct, product]);
           }}
-        >ADD</button>
+        >
+          ADD
+        </button>
       </spen>
-     {/* {renderallproduct()} */}
+      {/* {renderallproduct()} */}
       <div className="listproduct">
-       <ul>
-        {renderallproduct()}
-           {/* {allproduct.map(item => <li key={item}>Product :{product}</li> )}
-           */}
-       </ul>
+        <ul>
+          {/* {renderallproduct()} */}
+          {allproduct.map((item) => (
+            <li key={item.id}>
+              Product :{item.product} :{item.size}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

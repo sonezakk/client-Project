@@ -8,6 +8,7 @@ var request = require('request');
 let app = express()
 let router = express.Router()
 app.use(cors());
+
 app.use('/api', bodyParser.json(), router)
 app.use('/api', bodyParser.urlencoded({
 
@@ -36,59 +37,51 @@ let shrimps = [
         price :  '150 บาท'
     }
 ];
-
 router.route('/shrimps')
-
-.get((req, res) => res.json(shrimps))
-
-.post((req, res) => {
-
-    let shrimps = {}
-    shrimps.id = shrimps[shrimps.length - 1].id + 1
-    shrimps.day = req.body.day
-    shrimps.city = req.body.city
-    shrimps.state = req.body.state
-    shrimps.productshrimps=req.body.productshrimps
-    shrimps.size = req.body.size
-    shrimps.price =req.body.price
-    shrimps.push(shrimps);
-    res.json({ message: 'shrimps created!' })
     
-})
+    .get((req, res) => res.json(shrimps))
+    // insert a new bear
+    .post((req, res) => {
+        var shrimp = {};
+        shrimp.id = shrimps.length > 0 ? shrimps[shrimps.length - 1].id + 1 : 0;
+        shrimp.day = req.body.day
+        shrimp.city = req.body.city
+        shrimp.state = req.body.state
+        shrimp.productshrimps = req.body.productshrimps
+        shrimp.size =req.body.size
+        shrimp.price =req.body.price
+        shrimps.push(shrimp);
+        res.json({ message: 'shrimp created!' })
+    })
 
-router.route('/shrimps/:shrimps_id')
+router.route('/shrimps/:shrimp_id')
+    .get((req, res) => {
+        let id = req.params.shrimp_id
+        let index = shrimps.findIndex(shrimp => (shrimp.id === +id))
+        res.json(shrimps[index])                   // get a shrimp
+    })
+    .put((req, res) => {                               // Update a shrimp
+        let id = req.params.shrimp_id
+        let index = shrimps.findIndex(shrimp => (shrimp.id === +id))
+        shrimps[index].day = req.body.day;
+        shrimps[index].city = req.body.city;
+        shrimps[index].state = req.body.state;
+        shrimps[index].city =req.body.city;
+        shrimps[index].productshrimps =req.body.productshrimps;
+        shrimps[index].size =req.body.size;
+        shrimps[index].price= req.body.price;
+        res.json({ message: 'shrimp updated!' + req.params.shrimp_id });
+    })
+    .delete((req, res) => {                   // Delete a shrimp
+        // delete     shrimps[req.params.shrimp_id]
+        let id = req.params.shrimp_id
+        let index = shrimps.findIndex(shrimp => shrimp.id === +id)
+        shrimps.splice(index, 1)
+        res.json({ message: 'shrimp deleted: ' + req.params.bear_id });
+    })
 
-.get((req, res) => {
 
-    let id = req.params.shrimps_id
-    let index = shrimps.findIndex(shrimps => (shrimps.id === +id))
-    res.json(shrimps[index])
-})
 
-.put((req, res) => {
-
-    //update shrimps
-
-    let id = req.params.shrimps_id
-    let index = shrimps.findIndex(shrimps => (shrimps.id === +id))
-    shrimps[index].day = req.body.day
-    shrimps[index].city = req.body.city
-    shrimps[index].state = req.body.state
-    shrimps[index].productshrimps=req.body.productshrimps
-    shrimps[index].size = req.body.size
-    shrimps[index].price =req.body.price
- 
-    res.json({ message: 'shrimps Update !' + req.params.shrimps_id});
-
-})
-
-.delete((req, res) => {
-
-     let id = req.params.shrimps_id
-    let index = shrimps.findIndex( shrimps =>(shrimps.id === +id))
-    shrimps.splice(index, 1)
-    res.json({ message: 'shrimps Delete : ' + req.params.shrimps_id });
-})
 
 
 

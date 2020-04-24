@@ -27,7 +27,7 @@ export default function Addshrimp() {
             <div>
                 <p>price</p>
                 <input ></input>  bath
-            </div>
+            </div> 
             
  <Button>OK</Button>
         </div>
