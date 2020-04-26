@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
     Collapse,
@@ -13,15 +14,19 @@ import {
   } from 'reactstrap';
 import firelogin from '../config/firebase';
 import styled from 'styled-components'
-const Outuser =styled.button`
-border: 2px solid grey;
-black : red;
-border-radius : 8px;
-witdth : auto;
+const Outuser =styled.a`
+border: 1px solid grey;
 
-.p1 
+border-radius : 4px;
+cursor: pointer;
+p1
 {
-    background-color :red
+  font-size : 20px
+}
+p1:hover 
+{
+
+    background-color : #696969
 }
 
 
@@ -42,7 +47,7 @@ export default function Bar(props) {
         <div>
             
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">แบ่งปันราคากุ้ง</NavbarBrand>
+          <NavbarBrand href="/home">แบ่งปันราคากุ้ง</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
@@ -50,10 +55,13 @@ export default function Bar(props) {
                 <NavLink  href="/ProductShrimp">ราคากุ้ง</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/ProductShrimp">เพิ่มราคากุ้ง</NavLink>
+                <NavLink href="/Manage">เพิ่มราคากุ้ง</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/insertshrimp" >กุ้ง</NavLink>
+                <NavLink   href="/insertshrimp" >กุ้ง API</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/Shrimp" >test</NavLink>
               </NavItem>
             </Nav>
             <NavbarText >

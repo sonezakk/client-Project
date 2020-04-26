@@ -4,13 +4,16 @@ import Loginpage from "./component/login/Loginpage";
 
 import  Home from  "./component/Home";
 import firelogin from './config/firebase';
-import Addshrimp from './component/Addshrimp';
+import InputFrom from './component/component-redux/InputFrom'
 
 import ProductShrimp from './component/ProductShrimp'
 import Insertshrimp from './component/Insertshrimp';
+import Manage from './component/component-redux/Manage';
+import Main1 from './component/component-redux/Main1';
+import ReduxshrimpL from './component/component-redux/ReduxshrimpL';
+import Shrimp from './component/component-redux/Shrimp';
 
 export default class App extends Component {
-
 
   constructor(props) {
     super(props)
@@ -49,11 +52,18 @@ export default class App extends Component {
           
         </div>
       <div>
-        <Switch>
-        <Route  path="/Loginpage" component={Loginpage} />
-        <Route  path="/ProductShrimp" component={ProductShrimp}/>
+        <BrowserRouter>
+        <div>
+          <Switch>
+        <Route  exact path="/home" component={Main1} />
+        <Route  path="/Shrimpreduex" component={ReduxshrimpL}/>
         <Route  path="/insertshrimp" component={Insertshrimp}/>
+        <Route  path="/InputFrom" component={InputFrom}/>
+        <Route  path="/Manage" component={Manage}/>
+        <Route  path="/Shrimp" component={Shrimp}/>
         </Switch>
+        </div>
+        </BrowserRouter>
       </div>
     </div>
     )

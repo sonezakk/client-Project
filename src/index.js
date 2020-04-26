@@ -4,13 +4,28 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from 'react-router-dom';
+import {Provider} from 'react-redux'
+import { createStore, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+import thunk from 'redux-thunk';
+import Reducer from "./component/redux/Index.js"
 
+const store =createStore(Reducer,applyMiddleware(thunk,logger))
+const Reatapp =() =>{
+  return(
+    <Provider store={store}>
+      <App/>
+    </Provider>
+  )
+}
 ReactDOM.render(
+  <React.StrictMode>
   <BrowserRouter>
 
-<App />
+      <Reatapp/>
 
-  </BrowserRouter>,
+  </BrowserRouter>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 

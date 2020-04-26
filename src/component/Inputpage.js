@@ -1,8 +1,9 @@
+
 import React, { useState,useEffect } from 'react'
 import axios from 'axios'
-import ShrimpL from "./ShrimpL"
+import InputFrom from './component-redux/InputFrom';
 
-export default function Insertshrimp() {
+export default function Insertshrimp(props) {
     
     const [shrimps, setShimps] = useState({})
     const [formData, setData] = useState({
@@ -17,11 +18,7 @@ export default function Insertshrimp() {
   
     const { id, day, city,state,productshrimps,size,price } = formData;
   
-    const getshrimps = async () => {
-      const result = await axios.get(`http://localhost/api/shrimps`)
-      setShimps(result.data)
-      console.log(result.data)
-    }
+
     const addshrimp = async () => {
         const result = await axios.post(`http://localhost/api/shrimps`, {
             id: 0,
@@ -33,19 +30,11 @@ export default function Insertshrimp() {
             price : ''
         })
         console.log(result.data)
-        getshrimps()
       }
-    useEffect(() => {
-      getshrimps()
-    }, [])
     return (
-       
-        <div className="cs">
-             
-                
-            
-        <ShrimpL  shrimps={shrimps}/>
+        <div>
+            <InputFrom data={formData} ondata={setData} addshrimp={addshrimp}/>
         </div>
     )
-    
 }
+

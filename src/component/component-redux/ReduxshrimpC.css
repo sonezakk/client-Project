@@ -1,0 +1,27 @@
+.listmenuheader
+{
+   width: 100%;
+}
+
+
+.listmenu
+{
+    align-items: center;
+    display: flex;
+    width: 60%;
+    border: 2px solid gray;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding-left: 20px;
+    
+}
+.listmenu p
+{
+    padding: 10px 100px 10px 10px;
+   
+}
+.daycss
+{
+    padding-top: ;
+}

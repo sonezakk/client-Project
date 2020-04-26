@@ -1,25 +1,26 @@
 import React from 'react';
 import styled from 'styled-components'
-const Blackg =styled.div`
-ฺdisplay: ;
-border-radius: 8px;
-padding: 0.5rem 0;
-margin: 0.5rem 1rem;
-width: 11rem;
-background: transparent;
-color: black;
-border: 1px solid black;
-`
+import './shrimpC.css'
+
 const ShrimpC = props => {
     return (
-        <Blackg>
-        <div>
-            <div  >
-            <span>{props.id}{props.day} {props.city} {props.state} {props.productshrimp}</span>
+        <div className="conten">
+       
+            
+            <div className="list">
+            <li className="id" >{props.id}</li>
+            <li> {props.day}</li>
+            <li className="city">{props.city}</li>
+            <li>{props.state}</li>
+            <li>{props.productshrimps}</li>
+            <li className="size"> {props.size}</li>
+            <li>{props.price}</li>
+           
+          
             </div>
-    
-        </div>
-        </Blackg>
+            </div>
+        
+       
     )
 }
 

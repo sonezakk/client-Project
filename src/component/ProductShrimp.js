@@ -1,10 +1,10 @@
 import React from 'react'
+import Inputpage from './Inputpage'
 
 export default function ProductShrimp(props) {
     return (
         <div>
-            <p>{props.name}</p>
-            <h1>Size : {props.size}</h1>
+          <Inputpage/>
         </div>
     )
 }

@@ -1,0 +1,31 @@
+.conten
+{
+    max-width: 100%;
+    display: flexbox;
+}
+
+.list 
+{
+
+}
+.list li
+{
+    color: grey;
+    display: inline-block;
+    padding-right: 220px; 
+    
+    
+    
+}
+.id
+{
+    margin-left: 20px;
+}
+.city
+{
+    margin-left: -10px;
+}
+.size
+{
+    margin-left: 12px ;
+}
