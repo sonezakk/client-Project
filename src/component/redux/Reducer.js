@@ -17,12 +17,12 @@ const shrimps = [
   },
 ];
 const initialState = {
-  test: shrimps,
+  test: shrimps
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'SHRIMP_ACTION_ADD':
+    case "SHRIMP_ACTION_ADD":
       return {
         ...state,
         test: [...state.test, action.payload],

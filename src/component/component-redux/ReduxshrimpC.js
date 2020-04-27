@@ -1,7 +1,8 @@
 import React from 'react'
 import './ReduxshrimpC.css'
+import { connect } from 'react-redux'
  function ReduxshrimpC(props) {
-    const {day,city,state,productshrimps,size,price} =props.products;
+    const {day,city,state,productshrimps,size,price} =props.allShrimps;
     
     return (
         <div className="listmenuheader">
@@ -18,4 +19,4 @@ import './ReduxshrimpC.css'
         </div>
     )
 }
-export default ReduxshrimpC;
+export default connect(state=>state.Reduxshrimp)(ReduxshrimpC)

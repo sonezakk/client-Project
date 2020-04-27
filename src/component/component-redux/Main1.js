@@ -5,6 +5,7 @@ export default function Main1() {
     <div className="con">
       <div className="img1">
         <img src="04.jpg" />
+        
       </div>
       <div className="mainti">
         <p>

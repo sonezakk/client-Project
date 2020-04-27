@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react'
+import {BrowserRouter ,  Router,Switch, Route,Link }   from 'react-router-dom';
 import { connect } from 'react-redux'
 import ReduxshrimpC from './ReduxshrimpC'
  const Shrimp=(props)=> {
@@ -10,7 +11,7 @@ import ReduxshrimpC from './ReduxshrimpC'
                 {
                     test.map((item,index)=>{
                         return(
-                            <ReduxshrimpC key={index} products={item}/>
+                            <ReduxshrimpC key={index} allShrimps={item}/>
                         )
                     })
                 }

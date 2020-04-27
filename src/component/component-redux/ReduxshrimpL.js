@@ -11,7 +11,7 @@ import './ReuxshrimpL.css'
     <div  className="maplist">
       {
      test.map((item,index)=>(
-       <ReduxshrimpC key={index} products={item}/>
+       <ReduxshrimpC key={index} allShrimps={item}/>
      ))
     }
     </div>
