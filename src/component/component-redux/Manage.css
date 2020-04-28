@@ -1,5 +1,11 @@
 .listProduct
 {
-    background-color: cadetblue;
+    background-color: rgb(175, 233, 235);
     height: 875px;
+}
+.headerM
+{
+    text-align: center;
+    font-family: 'Pridi', serif;
+    padding-top: 10px;
 }

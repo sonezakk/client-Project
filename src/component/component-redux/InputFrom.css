@@ -1,0 +1,32 @@
+.onboxinput {
+  border: 2px solid black;
+  margin: 20px 0px 0 750px;
+  width: 400px;
+  height: 500px;
+  padding: 25px;
+  border-radius: 8px;
+  background-color: khaki;
+}
+.onboxinput p {
+  margin: 5px 0 0 10px;
+  font-family: "Courier New", Courier, monospace;
+}
+.onboxinput input {
+  border: 1px solid grey;
+  border-radius: 8px;
+}
+.buttonCreate {
+  margin-top: 30px;
+  display: inline-block;
+  width: 100%;
+  border: 3px solid black;
+  text-align: center;
+  border-radius: 4px;
+  
+  padding: 5px;
+  background-color: #cbd8db;
+}
+.buttonCreate:hover
+{
+    background-color: rgb(78, 110, 129);
+}

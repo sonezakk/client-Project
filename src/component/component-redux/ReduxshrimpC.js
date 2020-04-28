@@ -6,15 +6,14 @@ import { connect } from 'react-redux'
     
     return (
         <div className="listmenuheader">
+         
         <div  className="listmenu">
-            
-            <p className="daycss">{day}</p>
+            <p>{day}</p>
             <p>{city}</p>
             <p>{state}</p>
             <p>{productshrimps}</p>
             <p>{size}</p>
-            <p>{price}</p>
-          
+            <p>{price}</p> 
         </div>
         </div>
     )

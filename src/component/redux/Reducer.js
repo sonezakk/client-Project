@@ -8,12 +8,20 @@ const shrimps = [
     price: "150 บาท",
   },
   {
-    day: "11/3/2562",
+    day: "12/3/2562",
     city: "พังงา",
-    state: "ท้ายเหมือง",
-    productshrimps: "กุ้งดำ",
-    size: "50 ตัว/โล",
-    price: "150 บาท",
+    state: "คลองเคียน",
+    productshrimps: "กุ้งขาว",
+    size: "47 ตัว/โล",
+    price: "160 บาท",
+  },
+  {
+    day: "12/3/2562",
+    city: "กระบี่",
+    state: "อ่าวลึก",
+    productshrimps: "กุ้งขาว",
+    size: "47 ตัว/โล",
+    price: "160 บาท",
   },
 ];
 const initialState = {

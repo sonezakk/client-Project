@@ -1,0 +1,45 @@
+{
+    font-size :30px
+
+}
+
+.headerbar
+{
+    align-items: center;
+    display: flex;
+    border-radius: 8px;
+    justify-content: space-around;
+    padding-right: 80px;
+    position: relative;
+    margin-top: 10px;
+    
+    
+}
+.titilelist
+{
+    text-align: center;
+    font-family: 'Pridi', serif;
+    padding-top: 10px;
+}
+.headerbar p
+{
+    
+    font-size: 18px;
+}
+.maplist
+{
+    background-color: #8fb0a9;
+    height: 880px;
+}
+.manubar
+{
+    border: 2px solid black;
+    padding-top: px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-color: #d76235;
+}
+.headerbar p
+{
+    padding: 10px 130px 10px 120px;
+}

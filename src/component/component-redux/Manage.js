@@ -1,20 +1,19 @@
 import React from "react";
-import ReduxshrimpL from "./ReduxshrimpL";
 import { connect } from "react-redux";
 import InputFrom from "./InputFrom";
 import { ProductAdd} from "../redux/Action"
-import Shrimp from "./Shrimp";
+;
 import './Manage.css'
 const Manage = (props) => {
-    const {test, createShrimp} =props;
+    const {createShrimp} =props;
   console.log(props);
   const addshrimps = (data) => {
     createShrimp(data);
   }
   return (
     <div className="listProduct">
-      <h1>รายการกุ้ง</h1>
-      <ReduxshrimpL />
+      <h1 className="headerM">เพิ่มข้อมูลราคากุ้ง</h1>
+     
       <InputFrom addShrimps={addshrimps} />
     </div>
   );
