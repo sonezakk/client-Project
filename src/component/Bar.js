@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link,NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import firelogin from "../config/firebase";
@@ -7,7 +7,6 @@ import styled from "styled-components";
 import "./Bar.css";
 const Outuser = styled.a`
   border: 1px solid grey;
-
   border-radius: 4px;
   cursor: pointer;
   p1 {
@@ -28,23 +27,27 @@ function Bar(props) {
   return (
     <div className="boxBar">
       <div className="inlink-1">
-        <Link className="main0" to="/">
-          <h1>แบ่งปันกุ้ง</h1>
-        </Link>
+      <img className="imgshrimp" src="06.PNG"></img>
+          <Link className="main0" to="/">
+            
+            <h1>แบ่งปันราคากุ้ง</h1>
+          </Link>
+
         <Link to="/Manage">
           <li>เพิ่มข้อมูลกุ้ง</li>
         </Link>
         <Link to="/Shrimp">
           <li>แสดงราคากุ้ง</li>
         </Link>
-        <NavLink style="" to="/Shrimp">
-        <li>แสดงราคากุ้ง</li>
-          </NavLink>
-
+        <Link to="/insertshrim">
+          <li>แสดงราคากุ้ง(Api)</li>
+        </Link>
+        
         <div className="logoutfirebase">
-          <p onClick={logout}>Logout</p>
+          <button  onClick={logout}>Logout</button>
         </div>
-      </div>
+        </div>
+      
     </div>
   );
 }

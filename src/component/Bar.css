@@ -3,46 +3,93 @@
     width: auto;
     padding: 10px 10px 5px 10px ;
     border: 1px solid black;
-    background-color: burlywood;
+    background-color: rgb(247, 247, 218);
     color: black;
-    border-radius: 3px;
+    border-radius: 8px;
     
 }
-.inlink-1 
+.Titleshrimp
+{
+    border: 2px solid black;
+}
+.main0
+{
+    display: flex;
+    align-items: center;
+    margin-left: -250px;
+}
+.main0 h1
+{
+    margin-left: 10px;
+}
+.imgshrimp 
+{
+    width: 5%;
+    padding: 2px;
+    
+}
+
+.inlink-1  
  {
     display: flex;
     color: black;
     justify-content: space-between;
     align-items: center;
-    text-emphasis: none;;
-    list-style: none; 
+    text-decoration: none;
+    list-style-type: none;
+    margin-right: 50px;
+ 
    
 }
-.inlink-1 NavLink li
+.inlink-1 h1
 {
+    color: gray;
+    font-family: 'Pridi', serif;
+}
+
+.inlink-1 li
+{
+    color: rgb(78, 69, 69);
+    font-family: 'Pridi', serif;
+}
+.inlink-1 li:hover
+{
+    color: rgb(146, 228, 253);
+    font-family: 'Pridi', serif;
+}
+.inlink-1:link {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
   text-decoration: none;
 }
-
-
-.main0
+.inlink-1 a:link
 {
-    font-size: 25px;
+    
     text-decoration: none;
 }
-.logoutfirebase
+h1:link
 {
-    border: 1px solid grey;
-    border-radius : 4px;
-    cursor: pointer;
-    margin-left: 50px;
-
+    color: blueviolet;
+    text-decoration: none;
 }
-.logoutfirebase p
+.inlink-1 li:visited
 {
-    padding-top:5px ;
-    font-size: 10px;
+    color: rgb(78, 206, 174);
+    cursor:
 }
-p:hover
+.logoutfirebase button
 {
-    background-color : #696969
+    padding: 5px;
+    border: 2px solid black;
+    width: 80px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: cadetblue;
+    
+ 
+}
+.logoutfirebase button:hover
+{
+    background-color: chocolate;
 }
