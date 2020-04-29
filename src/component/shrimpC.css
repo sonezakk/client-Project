@@ -4,28 +4,26 @@
     display: flexbox;
 }
 
-.list 
+.list5
 {
-
+    display: flex;
+    justify-content: space-around;
+    padding-left: 30px;
+    margin-top: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    height:40px;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgb(225, 243, 182)
 }
-.list li
+.list5 li
 {
-    color: grey;
+    color: rgb(0, 0, 0);
+    
     display: inline-block;
-    padding-right: 220px; 
     
     
     
-}
-.id
-{
-    margin-left: 20px;
-}
-.city
-{
-    margin-left: -10px;
-}
-.size
-{
-    margin-left: 12px ;
+
+    
 }
