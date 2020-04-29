@@ -11,22 +11,18 @@ import thunk from 'redux-thunk';
 import Reducer from "./component/redux/Index.js"
 
 const store =createStore(Reducer,applyMiddleware(thunk,logger))
-const Reatapp =() =>{
-  return(
-    <Provider store={store}>
-      <App/>
-    </Provider>
-  )
-}
+
 ReactDOM.render(
+  <Provider store={store}>
   <Router>
   <React.StrictMode>
  
 
-      <Reatapp/>
+      <App/>
 
   </React.StrictMode>
-  </Router>,
+  </Router>
+  </Provider>,
   document.getElementById('root')
 );
 

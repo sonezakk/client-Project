@@ -20,18 +20,18 @@ let shrimps = [
 
     {
        id : 1,
-       day : '10/3/2562',
-       city : 'พังงา',
-       state :  'ท้ายเหมือง',
+       day : '13/3/2562',
+       city : 'ภูเก็ต',
+       state :  'ไม้ขาว',
        productshrimps :'กุ้งดำ',
        size : '50 ตัว/โล',
        price :  '150 บาท'
     },
     {
         id : 2,
-        day : '11/3/2562',
+        day : '25/3/2562',
         city : 'พังงา',
-        state :  'ท้ายเหมือง',
+        state :  'เขาเฒ่า',
         productshrimps :'กุ้งดำ',
         size : '50 ตัว/โล',
         price :  '150 บาท'
