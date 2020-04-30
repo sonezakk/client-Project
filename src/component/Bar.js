@@ -14,7 +14,7 @@ function Bar(props) {
   return (
     <div className="boxBar">
       <div className="inlink-1">
-      <img className="imgshrimp" src="06.PNG"></img>
+      <img className="imgshrimp" src="06.png"/>
           <Link className="main0" to="/">
             
             <h1>แบ่งปันราคากุ้ง</h1>

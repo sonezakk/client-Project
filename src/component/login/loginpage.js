@@ -33,7 +33,7 @@ const Loginpage = () => {
   return (
     <div className="body">
       <div className="shrimp">
-        <img src="01.jpg" alt="" />
+        <img src="01.jpg" />
       </div>
       <div className="onn">
         <h1 className="title">แบ่งปันราคากุ้ง</h1>
